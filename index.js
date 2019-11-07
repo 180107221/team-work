@@ -53,12 +53,12 @@ function Convert(){
     });
     
     if(cent == "" && met == "" && kil=="" && yar=="" && inc=="" && mil==""){
-		mil = parseFloat(fe)*5280;
-        met = parseFloat(fe)/0.00062137;
-        inc = parseFloat(fe)*63360;
-        cent = parseFloat(fe)/0.0000062137;
-        yar = parseFloat(fe)*1760;
-        kil = parseFloat(fe)/0.62137;
+		mil = parseFloat(fe)*0.00018939;
+        met = parseFloat(fe)/3.2808;
+        inc = parseFloat(fe)*12;
+        cent = parseFloat(fe)/0.032808;
+        yar = parseFloat(fe)*0.33333;
+        kil = parseFloat(fe)/3280.8;
 		centimeters.value = parseFloat(cent).toFixed(1);
         meters.value = parseFloat(met).toFixed(1);
         kilometers.value = parseFloat(kil).toFixed(1);
@@ -69,12 +69,12 @@ function Convert(){
 
 	feet.addEventListener('change',()=>{
 		fe = feet.value;
-		mil = parseFloat(fe)*5280;
-        met = parseFloat(fe)/0.00062137;
-        inc = parseFloat(fe)*63360;
-        cent = parseFloat(fe)/0.0000062137;
-        yar = parseFloat(fe)*1760;
-        kil = parseFloat(fe)/0.62137;
+		mil = parseFloat(fe)*0.00018939;
+        met = parseFloat(fe)/3.2808;
+        inc = parseFloat(fe)*12;
+        cent = parseFloat(fe)/0.032808;
+        yar = parseFloat(fe)*0.33333;
+        kil = parseFloat(fe)/3280.8;
 		centimeters.value = parseFloat(cent).toFixed(1);
         meters.value = parseFloat(met).toFixed(1);
         kilometers.value = parseFloat(kil).toFixed(1);
