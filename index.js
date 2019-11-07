@@ -50,6 +50,37 @@ function Convert(){
         yards.value = parseFloat(yar).toFixed(1);
         feet.value = parseFloat(fe).toFixed(1);
         inches.value = parseFloat(inc).toFixed(1);
+    });
+    
+    if(cent == "" && met == "" && kil=="" && yar=="" && inc=="" && mil==""){
+		mil = parseFloat(fe)*5280;
+        met = parseFloat(fe)/0.00062137;
+        inc = parseFloat(fe)*63360;
+        cent = parseFloat(fe)/0.0000062137;
+        yar = parseFloat(fe)*1760;
+        kil = parseFloat(fe)/0.62137;
+		centimeters.value = parseFloat(cent).toFixed(1);
+        meters.value = parseFloat(met).toFixed(1);
+        kilometers.value = parseFloat(kil).toFixed(1);
+        yards.value = parseFloat(yar).toFixed(1);
+        miles.value = parseFloat(mil).toFixed(1);
+        inches.value = parseFloat(inc).toFixed(1);
+	}
+
+	feet.addEventListener('change',()=>{
+		fe = feet.value;
+		mil = parseFloat(fe)*5280;
+        met = parseFloat(fe)/0.00062137;
+        inc = parseFloat(fe)*63360;
+        cent = parseFloat(fe)/0.0000062137;
+        yar = parseFloat(fe)*1760;
+        kil = parseFloat(fe)/0.62137;
+		centimeters.value = parseFloat(cent).toFixed(1);
+        meters.value = parseFloat(met).toFixed(1);
+        kilometers.value = parseFloat(kil).toFixed(1);
+        yards.value = parseFloat(yar).toFixed(1);
+        miles.value = parseFloat(mil).toFixed(1);
+        inches.value = parseFloat(inc).toFixed(1);
 	});
 }
 
