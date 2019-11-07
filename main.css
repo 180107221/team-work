@@ -1,0 +1,87 @@
+#con{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		.left-part{
+			width: 33.2%;
+			height: 82vh;
+			position: relative;
+		}
+
+		.top{
+			width: 33.2%;
+			height: 82vh;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			border: 2px solid lightgray;
+		}
+
+		.right-part{
+			width: 33.2%;
+			height: 82vh;
+			position: relative;
+		}
+
+		.t1{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+
+		button{
+			text-decoration: none;
+			border: none;
+			background-color: white;
+			width: 125px;
+			height: 125px;
+			font-size: 26px;
+			color: gray;
+			background-color: lightgray;
+			border-radius: 15px;
+			margin: 10px;
+		}
+
+		.t2{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		.equal{
+			background: linear-gradient(to right, forestgreen,chartreuse);
+			color: white;
+		}
+
+		.top span{
+			position: absolute;
+			top:300px;
+			font-size: 22px;
+		}
+
+		.top p{
+			position: absolute;
+			bottom: 50px;
+			font-size: 32px;
+		}
+
+		footer{
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+		}
+
+		footer button{
+			background: linear-gradient(to right, forestgreen,chartreuse);
+			color: white;
+			width: 100px;
+			height: 100px;
+			border-radius: 90px;
+		}
+
+		.log{
+			width: 200px;
+			border-radius: 20px;
+		}

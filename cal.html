@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="main.css">	
+	<script type="text/javascript" src="work.js" defer></script>
+</head>
+<body>
+	<div id="con">
+		<div class="left-part">
+			<table class="t1">
+				<tr>
+					<td><button value="1" onclick="insert('1')">1</button></td>
+					<td><button value="2" onclick="insert('2')">2</button></td>
+					<td><button value="3" onclick="insert('3')">3</button></td>
+				</tr>
+				<tr>
+					<td><button value="4" onclick="insert('4')">4</button></td>
+					<td><button value="5" onclick="insert('5')">5</button></td>
+					<td><button value="6" onclick="insert('6')">6</button></td>
+				</tr>
+				<tr>
+					<td><button value="7" onclick="insert('7')">7</button></td>
+					<td><button value="8" onclick="insert('8')">8</button></td>
+					<td><button value="9" onclick="insert('9')">9</button></td>
+				</tr>
+				<tr>
+					<td><button value="0" onclick="insert('0')">0</button></td>
+					<td><button value="dot" onclick="insert('.')">.</button></td>
+					<td><button value="00" onclick="insert('00')">00</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="top">
+			<div class="calcc"><form name="call"><input type="text" name="calll" readonly>
+			</form></div>
+		</div>
+		<div class="right-part">
+			<table class="t2">
+				<tr>
+					<td><button value="XY">X<sup><small>Y</small></sup></button></td>
+					<td><button value="X2">X<sup><small>2</small></sup></button></td>
+					<td><button value="radX">&#8730X</button></td>
+				</tr>
+				<tr>
+					<td><button value="C" onclick="clean()">C</button></td>
+					<td><button value="plus" onclick="insert('+')">+</button></td>
+					<td><button value="minus" onclick="insert('-')">&#8722</button></td>
+				</tr>
+				<tr>
+					<td><button value="del" onclick="back()">&#8656</button></td>
+					<td><button value="multiple" onclick="insert('*')">&#215</button></td>
+					<td><button value="divide" onclick="insert('/')">&#247</button></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><button value="equal" class="equal" onclick="ten()">=</button></td>
+				</tr>
+			</table>
+		</div>
+		<footer>
+			<button value="left">&#8656</button>
+			<button class="log">LOG</button>
+			<button value="right">&#8658</button>
+		</footer>
+
+		  <script>
+          function insert(num) {
+              document.call.calll.value =
+              document.call.calll.value + num;
+          }
+          function clean(){
+              document.call.calll.value = "";
+          }
+          function back(){
+            var exp = document.call.calll.value;
+            document.call.calll.value = exp.substring(0,exp.length-1);
+          }
+          function ten(){
+            var exp = document.call.calll.value;
+            if(exp){
+              document.call.calll.value = eval(exp);
+            }
+          }
+        </script>
+	</div>
+</body>
+</html>
